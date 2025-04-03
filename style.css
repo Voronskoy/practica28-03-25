@@ -23,11 +23,20 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.25s 0.8s;
+}
+.card:hover{
+    transform: scale(1.05);
+    /* transition: transform 0 0.7s; */
 }
 .card>img{
     width: 250px;
     padding: 10px;
     height: 250px;
+    transition: transform 0.25s 0.8s;
+}
+.card:hover>img{
+    transform: scaleX(-1);
 }
 .card>h2{
     text-transform: uppercase;
@@ -75,3 +84,64 @@ img{
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+.ad{
+position: fixed;
+right: -300px;
+top: 30%;
+width: 300px;
+background-color:rgb(65, 65, 252);
+color:white;
+padding: 15px;
+border-bottom-left-radius:10px;
+border-top-left-radius: 10px;
+z-index: 999;
+box-shadow: 0 0 5px gray;
+transition: right 0.8s;
+}
+.ad-tab{
+position: absolute;
+left: -61px;
+top: 34px;
+background-color: rgb(255, 255, 255);
+color:red;
+padding: 10px;
+transform: rotate(-90deg);
+border-top-right-radius:10px;
+border-top-left-radius: 10px;
+box-shadow: 0 0 5px gray;
+}
+.sell{
+font-weight: 800;
+}
+.ad:hover{
+    right: 0;
+    
+}
+.popup{
+    position: fixed;
+    top: -200px;
+    background-color:green;
+    color: white;
+    display: inline-block;
+    padding: 15px;
+    left: 50%;
+    z-index: 999;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    animation: slide-in 3s 1;
+}
+@keyframes slide-in {
+    0%{
+        top: -200px;
+    }
+    25%{
+        top: 20px;
+    }
+    75%{
+        top:20px;
+    }
+    100%{
+        top:-200px;
+    }
+}
+
